@@ -1,7 +1,8 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <!-- -->
+      {{ $t('hello') }} {{ count }}
+      <v-btn @click="increment">increment</v-btn>
     </v-app-bar>
     <v-main>
       <!-- Provides the application the proper gutter -->
@@ -15,3 +16,12 @@
     </v-footer>
   </v-app>
 </template>
+
+<script setup>
+import { storeToRefs } from 'pinia';
+import useCounter from '@/store/useCounter';
+
+const store = useCounter();
+const { count } = storeToRefs(store);
+const { increment } = store;
+</script>
