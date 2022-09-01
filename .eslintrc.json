@@ -2,12 +2,12 @@
   "root": true,
   "env": {
     "browser": true,
+    "es2021": true,
     "node": true
   },
   "extends": [
-    "eslint:recommended",
+    "@nuxtjs/eslint-config-typescript",
     "plugin:nuxt/recommended",
-    "plugin:vue/vue3-recommended",
     "plugin:prettier/recommended"
   ]
 }
