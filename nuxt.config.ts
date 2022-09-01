@@ -4,7 +4,7 @@ import availableLocales from './src/locales/availableLocales';
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   srcDir: 'src',
-  modules: ['@intlify/nuxt3'],
+  modules: ['@intlify/nuxt3', './src/modules/generate-locale-routes'],
   intlify: {
     localeDir: 'locales',
     vueI18n: {
@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       availableLocales,
       sync: true,
     },
+  },
+  localRoutesGenerator: {
+    availableLocales,
   },
   typescript: {
     tsConfig: {
