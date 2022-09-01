@@ -18,7 +18,11 @@ export default defineNuxtConfig({
       sync: true,
     },
   },
-  css: ['vuetify/lib/styles/main.sass'],
+  css: [
+    'vuetify/lib/styles/main.sass',
+    '@/assets/styles/global.scss',
+    '@/assets/styles/_variables.scss',
+  ],
   build: {
     transpile: ['vuetify'],
   },
