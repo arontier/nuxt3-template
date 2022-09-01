@@ -21,6 +21,8 @@
     "typescript": "^4.8.2"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.1",
+    "pinia": "^2.0.21",
     "vuetify": "^3.0.0-beta.9"
   }
 }
