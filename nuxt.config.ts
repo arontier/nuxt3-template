@@ -14,6 +14,10 @@ export default defineNuxtConfig({
       sync: true,
     },
   },
+  css: ['vuetify/lib/styles/main.sass'],
+  build: {
+    transpile: ['vuetify'],
+  },
   localRoutesGenerator: {
     availableLocales,
   },

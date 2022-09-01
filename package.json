@@ -19,5 +19,8 @@
     "sass": "^1.54.8",
     "sass-loader": "^13.0.2",
     "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "vuetify": "^3.0.0-beta.9"
   }
 }
