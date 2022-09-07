@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt';
-import availableLocales from './src/locales/availableLocales';
+import availableLocales from './locales/availableLocales';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@intlify/nuxt3',
     '@pinia/nuxt',
-    './src/modules/generate-locale-routes',
+    './modules/generate-locale-routes',
     '@nuxtjs/google-fonts',
   ],
   intlify: {
