@@ -18,11 +18,7 @@ export default defineNuxtConfig({
       sync: true,
     },
   },
-  css: [
-    'vuetify/lib/styles/main.sass',
-    '@/assets/styles/global.scss',
-    '@/assets/styles/_variables.scss',
-  ],
+  css: ['vuetify/lib/styles/main.sass'],
   build: {
     transpile: ['vuetify'],
   },
@@ -37,6 +33,19 @@ export default defineNuxtConfig({
         allowJs: true,
         noImplicitAny: false,
         types: [],
+      },
+    },
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @use "sass:color";
+            @import '@/assets/styles/_variables.scss';
+            @import '@/assets/styles/overrides.scss';
+          `,
+        },
       },
     },
   },
